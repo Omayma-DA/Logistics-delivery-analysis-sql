@@ -49,3 +49,11 @@ SELECT
            2
     ) AS late_percentage
 FROM deliveries;
+
+-- 6) Average shipping cost by carrier
+SELECT 
+    carrier,
+    ROUND(AVG(shipping_cost),2) AS avg_shipping_cost
+FROM deliveries
+GROUP BY carrier
+ORDER BY avg_shipping_cost DESC;
