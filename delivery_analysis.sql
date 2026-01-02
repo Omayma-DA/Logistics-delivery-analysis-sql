@@ -34,3 +34,9 @@ INSERT INTO deliveries VALUES
 (1008,'C008','Chicago','DHL','2025-01-06','2025-01-10','2025-01-10',640,6.8,29.50,'Delivered'),
 (1009,'C009','New York','FedEX','2025-01-06','2025-01-11','2025-01-11',450,3.9,18.10,'Delivered'),
 (1010,'C010','Atlanta','UPS','2025-01-06','2025-01-09','2025-01-08',150,2.3,10.20,'Delivered');
+
+--4)On time VS late deliveries
+SELECT status, 
+      COUNT(*) AS total_orders
+FROM deliveries
+GROUP BY status;
