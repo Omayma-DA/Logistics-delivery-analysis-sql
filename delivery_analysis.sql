@@ -41,7 +41,7 @@ SELECT status,
 FROM deliveries
 GROUP BY status;
 
---5) Percentage of late deliveries
+--5) % of late deliveries
 SELECT 
     ROUND(
         SUM(CASE WHEN status= 'Late' THEN 1 ELSE 0 END)::numeric
@@ -50,10 +50,15 @@ SELECT
     ) AS late_percentage
 FROM deliveries;
 
--- 6) Average shipping cost by carrier
+-- 6) Avg shipping cost by carrier
 SELECT 
     carrier,
     ROUND(AVG(shipping_cost),2) AS avg_shipping_cost
 FROM deliveries
 GROUP BY carrier
 ORDER BY avg_shipping_cost DESC;
+
+--7) Avg delivery time in days
+SELECT
+  ROUND(AVG(delivery_date - ship_date),2) AS avg_delivery_days
+FROM deliveries;
