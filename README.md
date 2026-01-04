@@ -26,7 +26,7 @@ Each row is one shipment. SOme important columns are:
   - shipping_cost - how much shipping cost
   - status - Delivered or Late
     
-#Questions I Tried to Answer
+# Questions I Tried to Answer
     1- Are deliveries on time?
          I check how many were delivered late vs on time, and calculated the percentage.
     2- Which warehouses struggle the most?
