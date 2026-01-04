@@ -37,9 +37,6 @@ Each row is one shipment. SOme important columns are:
          I calculated (delivery_date - ship_date) to see the average number of days.
     5- Does distance affect cost?
          I grouped distance into short/ medium/ long and checked how cost changes.
-#What I learned
-      - Don't start with SQL - Start with the question
-      - Pic
       
 # Future Ideas
 Some things that I want to add/ improve
